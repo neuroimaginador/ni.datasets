@@ -1,0 +1,12 @@
+Package: ni.datasets
+Type: Package
+Title: Access to (Some) Neuroimaging Datasets
+Version: 0.1.0
+Date: 2018-01-04
+Authors@R: person("Domingo", "López-Rodríguez", role = c("aut", "cre"), email = "neuroimaginador@gmail.com")
+Maintainer: Domingo Lopez-Rodriguez <neuroimaginador@gmail.com>
+Description: This package provides access to and is able to analyze (some) Neuroimaging datasets
+License: GPL (>= 2)
+Imports: neurobase
+Encoding: UTF-8
+LazyData: true
