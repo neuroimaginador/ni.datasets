@@ -1,9 +1,10 @@
-dl4ni_globals <- new.env()
+ni_globals <- new.env()
 
-with(dl4ni_globals, {
-  
-  dataset_cache_dir <- file.path(normalizePath("~"), "dl4ni.data")  
-  
+with(ni_globals, {
+
+  dataset_cache_dir <- file.path(normalizePath("~"), "dl4ni.data")
+  atlas_cache_dir <- file.path(normalizePath("~"), "ni.atlases")
+
 })
 
 

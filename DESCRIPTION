@@ -7,6 +7,6 @@ Authors@R: person("Domingo", "López-Rodríguez", role = c("aut", "cre"), email 
 Maintainer: Domingo Lopez-Rodriguez <neuroimaginador@gmail.com>
 Description: This package provides access to and is able to analyze (some) Neuroimaging datasets
 License: GPL (>= 2)
-Imports: neurobase
+Imports: neurobase, magrittr
 Encoding: UTF-8
 LazyData: true
