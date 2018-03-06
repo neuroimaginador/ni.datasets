@@ -72,12 +72,6 @@ get_atlas <- function(atlas_name,
     file.rename(from = file.path(dirname(get_atlases_dir()), extracted_folder),
                 to = destination_folder)
 
-    # files_to_move <- list.files(file.path(get_atlases_dir(), extracted_folder), full.names = FALSE)
-    #
-    # foo <- lapply(files_to_move, function(f) file.rename(from = file.path(get_atlases_dir(), extracted_folder, f),
-    #                                                      to = destination_folder))
-    #
-    # unlink(destination_folder)
     possible_atlases <- list.files(path = destination_folder, pattern = atlas_name, full.names = TRUE)
 
     return(invisible(possible_atlases))
