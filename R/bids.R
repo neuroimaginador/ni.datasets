@@ -155,14 +155,17 @@ import_anatomical_bids <- function(anat_folder) {
 
   # List of defined modalities in BIDS
   # TODO: parse "_ce-<ce_label>" for acquisitions with contrast agents
-  available_modalities <- c("T1w", "T2w", "T1rho", "T1map", "T2map", "T2star", "FLAIR", "FLASH", "PD", "PDmap", "PDT2", "inplaneT1",
+  available_modalities <- c("T1w", "T1wGad", "T2w", "T1rho", "T1map", "T2map", "T2star", "FLAIR", "FLASH", "PD", "PDmap", "PDT2", "inplaneT1",
                             "inplaneT2", "angio", "defacemask", "SWImagandphase")
 
+  modalities_expressions <- c("T1w", "ce-[[:print:]]*_T1w", "T2w", "T1rho", "T1map", "T2map", "T2star", "FLAIR", "FLASH", "PD", "PDmap",
+                              "PDT2", "inplaneT1", "inplaneT2", "angio", "defacemask", "SWImagandphase")
+
   # Find all available modalities for the specified subject
-  my_modalities <- lapply(available_modalities,
+  my_modalities <- lapply(modalities_expressions,
                           function(mod) {
 
-                            tmp <- anat_files[grep(anat_files, pattern = mod)]
+                            tmp <- anat_files[grep(anat_files, pattern = paste0("_", mod))]
 
                             if (length(tmp) > 0) {
 
